@@ -1,0 +1,217 @@
+.header {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 7rem;
+    border-bottom: 1px solid #000;
+    z-index: 9;
+    position: fixed;
+    transition: all 500ms;
+}
+
+.header.move {
+    height: 5.5rem;
+    position: fixed;
+    border: none;
+    z-index: 999;
+}
+
+.header.move h2, .header.move a {
+    color: #fff;
+    transition: 300ms;
+}
+
+.header.move::after {
+    content: ''; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0); 
+    pointer-events: none;
+    z-index: -1;
+}
+
+.header h2 {
+    margin-left: 2rem;
+    transition: 300ms;
+}
+
+.header a {
+    transition: 300ms;
+}
+
+.header__list {
+    margin-left: auto;
+    margin-right: 2rem;
+}
+
+.header__list__link:hover {
+    transform: scale(1.1);
+    transition: 300ms;
+}
+
+.header__list__link a {
+    scroll-behavior: smooth;
+}
+
+.header__list, .header__button__link {
+    display: flex;
+    align-items: center;
+}
+
+.header__list ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin-left: auto;
+}
+
+.headerMobile {
+    display: none;
+    z-index: 999;
+    transition: all 500ms;
+}
+
+.headerMobile.move {
+    position: fixed;
+    border: none;
+    z-index: 999;
+    transition: all 500ms;
+}
+
+.headerMobile.move::after {
+    content: ''; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0); 
+    pointer-events: none;
+    z-index: -1;
+}
+
+.headerMobile.move .headerMobile__logo {
+    color: #fff;
+}
+
+.headerMobile.move .toggler {
+    border-color: #fff;
+}
+
+.headerMobile.move .togglerBar {
+    background-color: #fff;
+}
+
+.headerMobile__logo {
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: 300ms;
+}
+
+
+.toggler {
+    cursor: pointer;
+    margin-right: auto;
+    border: 4px solid #000;
+    border-radius: 15px;
+    padding: 0.3rem 0.4rem;
+    width: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 1.5rem;
+    transition: 300ms;
+}
+
+.toggler.active .togglerBar:nth-child(1) {
+    transform: translateY(8px) rotate(40deg);
+}
+
+.toggler.active .togglerBar:nth-child(2) {
+    opacity: 0;
+}
+
+.toggler.active .togglerBar:nth-child(3) {
+    transform: translateY(-8px) rotate(-40deg);
+}
+
+.togglerBar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 300ms ease-in-out;
+    background-color: #000;
+}
+
+.headerMobile__list {
+    position: absolute;
+    width: 100%;
+    top: -250%;
+    transition: 300ms;
+    background-color: #ffffff;
+    border-top: 1px solid #757575;
+    display: flex;
+    justify-content: center;
+    z-index: 3;
+}
+
+.headerMobile.move .headerMobile__list {
+    background-color: #000;
+}
+
+.headerMobile.move .headerMobile__list__link a, .headerMobile.move .headerMobile__list__link p {
+    color: #fff;
+    border-color: #fff;
+}
+
+.headerMobile__list ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.headerMobile__list.active {
+    top: 100%;
+}
+
+.headerMobile__list__link {
+    width: 100%;
+}
+
+.headerMobile__list__link a {
+    scroll-behavior: smooth;
+}
+
+.headerMobile__list__link a, .headerMobile__list__link p {
+    border-bottom: 1px solid #757575;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    color: #000;
+}
+
+@media (max-width: 1000px) {
+    .header {
+        display: none;
+    }
+
+    .headerMobile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        height: 6rem;
+        width: 100%;
+        background-color: #fff;
+        z-index: 999;
+    }
+}

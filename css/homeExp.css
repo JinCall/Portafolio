@@ -1,0 +1,128 @@
+.home__exp {
+    margin: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home__expContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin-top: 2rem;
+}
+
+.home__exp__p {
+    position: absolute;
+    left: 40.5%;
+    top: 3%;
+    font-size: 2rem;
+}
+
+.home__exp__title {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+.home__exp__list {
+    position: relative;
+    display: grid;
+    width: 350px;
+    height: 350px;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    border: 2px solid #1a1a1a;
+    border-radius: 10px;
+    margin-bottom: 4rem;
+    margin-right: 2rem;
+    animation: fadeOut forwards 500ms;
+}
+
+.home__exp__list.active {
+    animation: fadeIn forwards 1s, dropIn forwards 1s;
+}
+
+@keyframes dropIn {
+    0% {
+        transform: translateY(7rem);
+    }
+    100% {
+        transform: translateY(8.5%);
+    }
+}
+
+.home__exp__list__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home__exp__list__item img {
+    width: 6rem;
+    height: 6rem;
+    object-fit: contain;
+}
+
+.home__exp__text {
+    display: flex;
+    flex-direction: column;
+    animation: fadeOut forwards 500ms;
+    margin: 0 3rem;
+    width: 60%;
+}
+
+.home__exp__text.active {
+    animation: fadeIn forwards 2.5s;
+}
+
+.home__exp__text__paragraph {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.home__exp__text__paragraph li, .home__exp__text__paragraph p {
+    margin-bottom: 1rem;
+    margin-right: auto;
+}
+
+.home__exp__text__paragraph h2 {
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 1200px) {
+    .home__exp div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home__exp__list {
+        margin: 0;
+        margin-bottom: 6rem;
+    }
+
+    .home__exp__text {
+        width: 90%;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 390px) {
+    .home__exp__list {
+        height: 250px;
+        width: 250px;
+    }
+
+    .home__exp__list__item img {
+        height: 4rem;
+        width: 4rem;
+    }
+}

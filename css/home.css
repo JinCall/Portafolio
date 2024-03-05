@@ -1,0 +1,16 @@
+@import url("./homeAbout.css");
+@import url("./homeProfile.css");
+@import url("./homeExp.css");
+@import url("./homeProjects.css");
+
+.home__container {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 1250px) {
+    .home__container {
+        flex-direction: column;
+        justify-content: center;
+    }
+}

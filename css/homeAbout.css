@@ -1,0 +1,64 @@
+
+.home__about {
+    width: 50%;
+    margin-top: 15rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fadeOut forwards 500ms;
+}
+
+.home__about.active {
+    animation: fadeIn forwards 2.5s;
+}
+
+.home__about__container {
+    width: 80%;
+}
+
+.home__about__container p {
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+
+.home__about__container__exp {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.home__about__container__exp img {
+    width: 2rem;
+}
+
+.home__about__container__exp p:nth-child(2) {
+    font-size: 1.5rem;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 1250px) {
+    .home__about {
+        width: 100%;
+        margin-top: 3rem;
+    }
+}
